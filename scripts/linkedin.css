@@ -1,0 +1,9 @@
+/* ==UserStyle==
+@name        LinkedIn Less BS
+@description Fewer suggested and promoted posts
+@match       https://www.linkedin.com/*
+==/UserStyle== */
+
+.fie-impression-container {
+    display: none;
+}
