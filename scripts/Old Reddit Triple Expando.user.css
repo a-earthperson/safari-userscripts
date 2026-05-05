@@ -1,0 +1,135 @@
+/* ==UserStyle==
+@name        Old Reddit Triple Expando
+@description Triples the rendered size of old.reddit.com expando buttons while preserving the existing sprite-state mappings.
+@match       https://old.reddit.com/*
+==/UserStyle== */
+
+/* The remote stylesheet has already assigned the correct sprite image/state.
+   This file only rescales the box and remaps sprite offsets at 3x. */
+   .expando-button {
+    width: 69px !important;
+    height: 69px !important;
+    margin: 6px 15px 6px 0 !important;
+    background-size: 147px auto !important;
+}
+
+.expando-button.expanded.video,
+.expando-button.expanded.selftext,
+.expando-button.expanded.crosspost {
+    background-position: 0 -1299px !important;
+}
+
+.expando-button.expanded.video:hover,
+.expando-button.expanded.selftext:hover,
+.expando-button.expanded.crosspost:hover {
+    background-position: 0 -1212px !important;
+}
+
+.expando-button.collapsed.selftext {
+    background-position: 0 -1647px !important;
+}
+
+.expando-button.collapsed.selftext:hover {
+    background-position: 0 -1560px !important;
+}
+
+.expando-button.collapsed.video {
+    background-position: 0 -1473px !important;
+}
+
+.expando-button.collapsed.video:hover {
+    background-position: 0 -1386px !important;
+}
+
+.expando-button.collapsed.crosspost {
+    background-position: -78px -1734px !important;
+}
+
+.expando-button.collapsed.crosspost:hover {
+    background-position: 0 -1734px !important;
+}
+
+@media only screen and (min-resolution: 2dppx), only screen and (-webkit-min-device-pixel-ratio: 2) {
+    .expando-button {
+        background-size: 69px 906px !important;
+    }
+
+    .expando-button.expanded.video,
+    .expando-button.expanded.selftext,
+    .expando-button.expanded.crosspost {
+        background-position: 0 -78px !important;
+    }
+
+    .expando-button.expanded.video:hover,
+    .expando-button.expanded.selftext:hover,
+    .expando-button.expanded.crosspost:hover {
+        background-position: 0 0 !important;
+    }
+
+    .expando-button.collapsed.selftext {
+        background-position: 0 -390px !important;
+    }
+
+    .expando-button.collapsed.selftext:hover {
+        background-position: 0 -312px !important;
+    }
+
+    .expando-button.collapsed.video {
+        background-position: 0 -234px !important;
+    }
+
+    .expando-button.collapsed.video:hover {
+        background-position: 0 -156px !important;
+    }
+
+    .expando-button.collapsed.crosspost {
+        background-position: 0 -537px !important;
+    }
+
+    .expando-button.collapsed.crosspost:hover {
+        background-position: 0 -468px !important;
+    }
+}
+
+img {
+    width: 96px;
+    aspect-ratio: auto 96 / 96;
+    height: 96px;
+}
+
+.thumbnail {
+    width: 96px;
+}
+
+.entry .buttons li.first a {
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+}
+
+.footer-parent, #hsts_pixel, .mobile-web-redirect-bar {
+    display: none;
+}
+
+
+.nextprev {
+    font-size: x-large;
+}
+
+.nav-buttons {
+    margin: 2rem;
+}
+
+.nextprev .separator, .next-suggestions .separator {
+    margin: 0;
+    margin-left: 1em;
+    padding-left: 1em;
+    border-left:1px solid #ccc
+}
+
+body {
+    width: 100vw;
+}
+
+.thing .title {
+    font-size: xx-large;
+}
